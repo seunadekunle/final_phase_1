@@ -1,0 +1,7 @@
+INFO:__main__:creating datasets...
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 517, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 292, in main
+    train_dataset = DeepFashionDataset(
+NameError: name 'DeepFashionDataset' is not defined

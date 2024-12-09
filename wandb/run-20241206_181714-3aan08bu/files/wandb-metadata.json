@@ -1,0 +1,25 @@
+{
+  "os":  "macOS-15.0-arm64-arm-64bit",
+  "python":  "3.9.20",
+  "startedAt":  "2024-12-07T02:17:14.209652Z",
+  "args":  [
+    "--epochs",
+    "50",
+    "--batch_size",
+    "32",
+    "--lr",
+    "0.001",
+    "--wandb"
+  ],
+  "program":  "/Users/seunadekunle/school/561/style_classifier/train.py",
+  "codePath":  "train.py",
+  "git":  {
+    "commit":  "01d4542d4504839c8f8e00e547100b28c9801cbe"
+  },
+  "email":  "seun9008@gmail.com",
+  "root":  "/Users/seunadekunle/school/561/style_classifier",
+  "host":  "MacBook-Pro.lan",
+  "username":  "seunadekunle",
+  "executable":  "/Users/seunadekunle/miniconda3/envs/style_classifier/bin/python",
+  "codePathLocal":  "train.py"
+}

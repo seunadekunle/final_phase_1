@@ -1,0 +1,13 @@
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+Epoch 0 [Train]: 100%|██████████████████████████| 125/125 [00:02<00:00, 41.67it/s, loss=0.434, acc=0.151]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 277, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 229, in main
+    train_metrics = train_epoch(
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 99, in train_epoch
+    **{k: sum(v)/len(v) for k, v in all_metrics.items()}
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 99, in <dictcomp>
+    **{k: sum(v)/len(v) for k, v in all_metrics.items()}
+TypeError: unsupported operand type(s) for +: 'int' and 'list'

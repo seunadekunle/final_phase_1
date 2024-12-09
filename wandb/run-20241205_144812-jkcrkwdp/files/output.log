@@ -1,0 +1,30 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 11198 train samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 val samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training:   0%|                                                                                                                                        | 0/175 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 325, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 264, in main
+    trainer.train()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 135, in train
+    train_metrics = self.train_epoch()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 74, in train_epoch
+    outputs = self.model(images)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/seunadekunle/school/561/style_classifier/src/models/style_classifier.py", line 110, in forward
+    group_inputs = self._split_attributes(x)
+  File "/Users/seunadekunle/school/561/style_classifier/src/models/style_classifier.py", line 92, in _split_attributes
+    return {
+  File "/Users/seunadekunle/school/561/style_classifier/src/models/style_classifier.py", line 93, in <dictcomp>
+    name: x[:, indices]
+IndexError: index 3 is out of bounds for dimension 0 with size 3

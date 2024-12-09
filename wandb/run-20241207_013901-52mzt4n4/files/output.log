@@ -1,0 +1,59 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 2744 train samples with 26 attributes
+INFO:src.data.dataset:loaded 385 val samples with 26 attributes
+INFO:src.data.dataset:loaded 747 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training: 100%|████████████████████████████████| 86/86 [21:13<00:00, 14.81s/it, loss=3.82, avg_loss=4.43]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:00<00:00,  4.63s/it]
+INFO:src.utils.trainer:Epoch 2/50
+Training: 100%|████████████████████████████████| 86/86 [20:52<00:00, 14.56s/it, loss=4.19, avg_loss=4.08]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:56<00:00,  4.32s/it]
+INFO:src.utils.trainer:Epoch 3/50
+Training: 100%|████████████████████████████████| 86/86 [22:25<00:00, 15.64s/it, loss=3.96, avg_loss=4.05]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:02<00:00,  4.78s/it]
+INFO:src.utils.trainer:Epoch 4/50
+Training: 100%|████████████████████████████████| 86/86 [24:17<00:00, 16.94s/it, loss=3.83, avg_loss=4.03]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:08<00:00,  5.24s/it]
+INFO:src.utils.trainer:Epoch 5/50
+Training: 100%|███████████████████████████████████| 86/86 [45:03<00:00, 31.44s/it, loss=4.13, avg_loss=4]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:31<00:00,  7.07s/it]
+INFO:src.utils.trainer:Epoch 6/50
+Training: 100%|████████████████████████████████| 86/86 [37:46<00:00, 26.36s/it, loss=4.02, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:41<00:00,  7.82s/it]
+INFO:src.utils.trainer:Epoch 7/50
+Training: 100%|███████████████████████████████████| 86/86 [37:12<00:00, 25.95s/it, loss=3.97, avg_loss=4]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:43<00:00,  7.99s/it]
+INFO:src.utils.trainer:Epoch 8/50
+Training: 100%|████████████████████████████████| 86/86 [50:54<00:00, 35.52s/it, loss=3.75, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:56<00:00,  4.36s/it]
+INFO:src.utils.trainer:Epoch 9/50
+Training: 100%|████████████████████████████████| 86/86 [32:08<00:00, 22.42s/it, loss=3.59, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:34<00:00,  7.29s/it]
+INFO:src.utils.trainer:Epoch 10/50
+Training: 100%|████████████████████████████████| 86/86 [36:10<00:00, 25.24s/it, loss=4.43, avg_loss=3.97]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:36<00:00,  7.41s/it]
+INFO:src.utils.trainer:Epoch 11/50
+Training: 100%|█████████████████████████████████| 86/86 [36:28<00:00, 25.45s/it, loss=3.8, avg_loss=3.96]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:36<00:00,  7.45s/it]
+INFO:src.utils.trainer:Epoch 12/50
+Training: 100%|█████████████████████████████████| 86/86 [36:35<00:00, 25.53s/it, loss=4.4, avg_loss=3.96]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:36<00:00,  7.42s/it]
+INFO:src.utils.trainer:Epoch 13/50
+Training: 100%|████████████████████████████████| 86/86 [36:06<00:00, 25.19s/it, loss=4.09, avg_loss=3.97]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:38<00:00,  7.59s/it]
+INFO:src.utils.trainer:early stopping triggered after 13 epochs
+INFO:__main__:evaluating on test set...
+/Users/seunadekunle/school/561/style_classifier/train.py:397: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load('best_model.pt'))
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 539, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 398, in main
+    test_loss, test_acc = evaluate_model(
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 449, in evaluate_model
+    for batch in tqdm(data_loader, desc='Evaluating'):
+NameError: name 'tqdm' is not defined

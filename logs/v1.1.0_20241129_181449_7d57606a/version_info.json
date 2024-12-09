@@ -1,0 +1,27 @@
+{
+    "version_id": "v1.1.0_20241129_181449_7d57606a",
+    "semantic_version": "1.1.0",
+    "timestamp": "20241129_181449",
+    "config_hash": "7d57606a",
+    "model_config": {
+        "name": "StyleClassifierV2",
+        "version": "1.1.0",
+        "description": "Improved version with residual connections and batch normalization",
+        "architecture": {
+            "base_model": "CLIP ViT-B/32",
+            "hidden_size": 512,
+            "dropout_rate": 0.2,
+            "use_residual": true,
+            "num_categories": 49,
+            "num_attributes": 26
+        },
+        "training": {
+            "batch_size": 32,
+            "learning_rate": 0.0002,
+            "num_epochs": 50,
+            "optimizer": "Adam",
+            "weight_decay": 0.0001,
+            "scheduler": "ReduceLROnPlateau"
+        }
+    }
+}

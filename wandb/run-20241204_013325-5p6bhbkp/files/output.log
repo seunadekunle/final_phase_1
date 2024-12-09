@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 255, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 166, in main
+    train_dataset = DeepFashionDataset(args.data_dir, split='train')
+  File "/Users/seunadekunle/school/561/style_classifier/src/data/dataset.py", line 33, in __init__
+    raise FileNotFoundError(
+FileNotFoundError: Could not find attribute file at data/deepfashion/Anno_fine/list_category_cloth.txt. Please ensure you have downloaded the DeepFashion dataset and placed it in the correct directory.

@@ -1,0 +1,32 @@
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Configure stats pid to 61262
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Loading settings from /Users/seunadekunle/.config/wandb/settings
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Loading settings from /Users/seunadekunle/school/561/style_classifier/wandb/settings
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/Users/seunadekunle/school/561/style_classifier/train.py', 'program': '/Users/seunadekunle/school/561/style_classifier/train.py'}
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_init.py:_log_setup():533] Logging user logs to /Users/seunadekunle/school/561/style_classifier/wandb/run-20241208_153241-jtuwbi92/logs/debug.log
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_init.py:_log_setup():534] Logging internal logs to /Users/seunadekunle/school/561/style_classifier/wandb/run-20241208_153241-jtuwbi92/logs/debug-internal.log
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_init.py:init():619] calling init triggers
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {'batch_size': 32, 'epochs': 50, 'lr': 0.001, 'device': 'cpu', 'wandb': True, 'output_dir': 'outputs', 'data_dir': 'data_deepfashion', 'test_mode': False}
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_init.py:init():669] starting backend
+2024-12-08 15:32:41,386 INFO    MainThread:61262 [wandb_init.py:init():673] sending inform_init request
+2024-12-08 15:32:41,387 INFO    MainThread:61262 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-12-08 15:32:41,387 INFO    MainThread:61262 [wandb_init.py:init():686] backend started and connected
+2024-12-08 15:32:41,391 INFO    MainThread:61262 [wandb_init.py:init():781] updated telemetry
+2024-12-08 15:32:41,425 INFO    MainThread:61262 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2024-12-08 15:32:41,777 INFO    MainThread:61262 [wandb_init.py:init():867] starting run threads in backend
+2024-12-08 15:32:41,908 INFO    MainThread:61262 [wandb_run.py:_console_start():2456] atexit reg
+2024-12-08 15:32:41,908 INFO    MainThread:61262 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2024-12-08 15:32:41,908 INFO    MainThread:61262 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2024-12-08 15:32:41,909 INFO    MainThread:61262 [wandb_run.py:_redirect():2395] Redirects installed.
+2024-12-08 15:32:41,911 INFO    MainThread:61262 [wandb_init.py:init():911] run started, returning control to user process
+2024-12-08 19:19:28,774 INFO    MainThread:61262 [wandb_run.py:_finish():2155] finishing run seun9008-usc/style-classifier/jtuwbi92
+2024-12-08 19:19:28,775 INFO    MainThread:61262 [wandb_run.py:_atexit_cleanup():2420] got exitcode: 0
+2024-12-08 19:19:28,776 INFO    MainThread:61262 [wandb_run.py:_restore():2402] restore
+2024-12-08 19:19:28,776 INFO    MainThread:61262 [wandb_run.py:_restore():2408] restore done
+2024-12-08 19:19:30,699 INFO    MainThread:61262 [wandb_run.py:_footer_history_summary_info():3960] rendering history
+2024-12-08 19:19:30,702 INFO    MainThread:61262 [wandb_run.py:_footer_history_summary_info():3992] rendering summary
+2024-12-08 19:19:30,708 INFO    MainThread:61262 [wandb_run.py:_footer_sync_info():3921] logging synced files

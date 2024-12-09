@@ -1,0 +1,46 @@
+{
+  "os":  "macOS-15.0-arm64-arm-64bit",
+  "python":  "3.9.20",
+  "startedAt":  "2024-12-06T08:36:14.313256Z",
+  "args":  [
+    "--wandb",
+    "--device",
+    "cpu",
+    "--test_mode",
+    "--epochs",
+    "2"
+  ],
+  "program":  "/Users/seunadekunle/school/561/style_classifier/train.py",
+  "codePath":  "train.py",
+  "git":  {
+    "commit":  "01d4542d4504839c8f8e00e547100b28c9801cbe"
+  },
+  "email":  "seun9008@gmail.com",
+  "root":  "/Users/seunadekunle/school/561/style_classifier",
+  "host":  "MacBook-Pro.local",
+  "username":  "seunadekunle",
+  "executable":  "/Users/seunadekunle/miniconda3/envs/style_classifier/bin/python",
+  "codePathLocal":  "train.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "388622782464"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Apple M1 Pro",
+    "ecpuCores":  2,
+    "pcpuCores":  6,
+    "gpuCores":  14,
+    "memoryGb":  16
+  }
+}

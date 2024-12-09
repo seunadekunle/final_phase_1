@@ -1,0 +1,15 @@
+{"time":"2024-12-09T04:31:37.314643-08:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-09T04:31:37.314701-08:00","level":"INFO","msg":"created symlink","path":"/Users/seunadekunle/school/567/style_classifier/wandb/run-20241209_043137-s9zfaiev/logs/debug-core.log"}
+{"time":"2024-12-09T04:31:37.436499-08:00","level":"INFO","msg":"created new stream","id":"s9zfaiev"}
+{"time":"2024-12-09T04:31:37.436624-08:00","level":"INFO","msg":"stream: started","id":"s9zfaiev"}
+{"time":"2024-12-09T04:31:37.436959-08:00","level":"INFO","msg":"writer: Do: started","stream_id":"s9zfaiev"}
+{"time":"2024-12-09T04:31:37.437747-08:00","level":"INFO","msg":"sender: started","stream_id":"s9zfaiev"}
+{"time":"2024-12-09T04:31:37.437864-08:00","level":"INFO","msg":"handler: started","stream_id":"s9zfaiev"}
+{"time":"2024-12-09T04:31:37.690601-08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-09T04:41:44.166866-08:00","level":"INFO","msg":"stream: closing","id":"s9zfaiev"}
+{"time":"2024-12-09T04:41:44.167054-08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-09T04:41:44.170154-08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-09T04:41:44.280874-08:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-12-09T04:41:44.280916-08:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-12-09T04:41:44.280926-08:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-12-09T04:41:45.172709-08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

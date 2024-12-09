@@ -1,0 +1,50 @@
+{
+  "os":  "macOS-15.0-arm64-arm-64bit",
+  "python":  "3.9.20",
+  "startedAt":  "2024-12-05T01:39:07.476299Z",
+  "args":  [
+    "--model",
+    "baseline",
+    "--data_dir",
+    "data/deepfashion",
+    "--batch_size",
+    "32",
+    "--epochs",
+    "50",
+    "--device",
+    "cpu"
+  ],
+  "program":  "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py",
+  "codePath":  "src/train_compare.py",
+  "git":  {
+    "commit":  "01d4542d4504839c8f8e00e547100b28c9801cbe"
+  },
+  "email":  "seun9008@gmail.com",
+  "root":  "/Users/seunadekunle/school/561/style_classifier",
+  "host":  "MacBook-Pro.local",
+  "username":  "seunadekunle",
+  "executable":  "/Users/seunadekunle/miniconda3/envs/style_classifier/bin/python",
+  "codePathLocal":  "src/train_compare.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "381450612736"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Apple M1 Pro",
+    "ecpuCores":  2,
+    "pcpuCores":  6,
+    "gpuCores":  14,
+    "memoryGb":  16
+  }
+}

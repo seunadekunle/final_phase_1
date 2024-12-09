@@ -1,0 +1,53 @@
+{
+  "os":  "macOS-15.0-arm64-arm-64bit",
+  "python":  "3.9.20",
+  "startedAt":  "2024-12-09T21:36:20.003850Z",
+  "args":  [
+    "--data_root",
+    "data_deepfashion",
+    "--batch_size",
+    "32",
+    "--backbone",
+    "resnet34",
+    "--embedding_dim",
+    "512",
+    "--epochs",
+    "50",
+    "--lr",
+    "1e-4",
+    "--wandb",
+    "--experiment_name",
+    "darn_resnet34_baseline",
+    "--test_mode"
+  ],
+  "program":  "/Users/seunadekunle/school/567/style_classifier/src/training/train_darn.py",
+  "codePath":  "src/training/train_darn.py",
+  "email":  "seun9008@gmail.com",
+  "root":  "/Users/seunadekunle/school/567/style_classifier",
+  "host":  "MacBook-Pro.lan",
+  "username":  "seunadekunle",
+  "executable":  "/Users/seunadekunle/miniconda3/envs/style_classifier/bin/python",
+  "codePathLocal":  "src/training/train_darn.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "395603607552"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Apple M1 Pro",
+    "ecpuCores":  2,
+    "pcpuCores":  6,
+    "gpuCores":  14,
+    "memoryGb":  16
+  }
+}

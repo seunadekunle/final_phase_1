@@ -1,0 +1,46 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 20 train samples with 26 attributes
+INFO:src.data.dataset:loaded 3 val samples with 26 attributes
+INFO:src.data.dataset:loaded 3 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training:   0%|                                                                                                            | 0/1 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 539, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 393, in main
+    trainer.train()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 191, in train
+    train_loss, train_acc = self.train_epoch()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 70, in train_epoch
+    for batch_idx, batch in enumerate(pbar):
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/_utils.py", line 715, in reraise
+    raise exception
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/seunadekunle/school/561/style_classifier/src/data/dataset.py", line 130, in __getitem__
+    image = self.transform(image)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
+    img = t(img)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torchvision/transforms/transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torchvision/transforms/functional.py", line 142, in to_tensor
+    raise TypeError(f"pic should be PIL Image or ndarray. Got {type(pic)}")
+TypeError: pic should be PIL Image or ndarray. Got <class 'torch.Tensor'>

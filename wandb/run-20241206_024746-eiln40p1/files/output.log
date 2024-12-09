@@ -1,0 +1,30 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 11198 train samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 val samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 test samples with 26 attributes
+INFO:__main__:creating model...
+Downloading: "https://download.pytorch.org/models/resnet50-11ad3fa6.pth" to /Users/seunadekunle/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 97.8M/97.8M [00:02<00:00, 49.8MB/s]
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training:   0%|                                                                                                          | 0/350 [00:05<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 388, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 328, in main
+    trainer.train()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 135, in train
+    train_metrics = self.train_epoch()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 75, in train_epoch
+    loss = self.criterion(outputs, labels)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 819, in forward
+    return F.binary_cross_entropy_with_logits(
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/nn/functional.py", line 3623, in binary_cross_entropy_with_logits
+    if not (target.size() == input.size()):
+AttributeError: 'dict' object has no attribute 'size'

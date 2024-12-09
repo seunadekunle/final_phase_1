@@ -1,0 +1,28 @@
+{
+  "os":  "macOS-15.0-arm64-arm-64bit",
+  "python":  "3.9.20",
+  "startedAt":  "2024-12-04T09:31:21.073996Z",
+  "args":  [
+    "--model",
+    "baseline",
+    "--data_dir",
+    "data/deepfashion",
+    "--batch_size",
+    "32",
+    "--epochs",
+    "50",
+    "--device",
+    "cuda"
+  ],
+  "program":  "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py",
+  "codePath":  "src/train_compare.py",
+  "git":  {
+    "commit":  "01d4542d4504839c8f8e00e547100b28c9801cbe"
+  },
+  "email":  "seun9008@gmail.com",
+  "root":  "/Users/seunadekunle/school/561/style_classifier",
+  "host":  "MacBookPro.lan",
+  "username":  "seunadekunle",
+  "executable":  "/Users/seunadekunle/miniconda3/envs/style_classifier/bin/python",
+  "codePathLocal":  "src/train_compare.py"
+}

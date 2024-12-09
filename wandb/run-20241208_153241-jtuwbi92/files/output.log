@@ -1,0 +1,64 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 2744 train samples with 26 attributes
+INFO:src.data.dataset:loaded 385 val samples with 26 attributes
+INFO:src.data.dataset:loaded 747 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training: 100%|████████████████████████████████| 86/86 [19:59<00:00, 13.95s/it, loss=3.99, avg_loss=4.43]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:48<00:00,  3.76s/it]
+INFO:src.utils.trainer:Epoch 2/50
+Training: 100%|████████████████████████████████| 86/86 [18:04<00:00, 12.61s/it, loss=3.98, avg_loss=4.08]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:49<00:00,  3.81s/it]
+INFO:src.utils.trainer:Epoch 3/50
+Training: 100%|████████████████████████████████| 86/86 [19:26<00:00, 13.57s/it, loss=4.28, avg_loss=4.04]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:57<00:00,  4.43s/it]
+INFO:src.utils.trainer:Epoch 4/50
+Training: 100%|████████████████████████████████| 86/86 [19:29<00:00, 13.60s/it, loss=4.02, avg_loss=4.03]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:48<00:00,  3.74s/it]
+INFO:src.utils.trainer:Epoch 5/50
+Training: 100%|█████████████████████████████████| 86/86 [19:55<00:00, 13.90s/it, loss=4.2, avg_loss=4.01]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:51<00:00,  3.94s/it]
+INFO:src.utils.trainer:Epoch 6/50
+Training: 100%|███████████████████████████████████| 86/86 [19:10<00:00, 13.37s/it, loss=4.13, avg_loss=4]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:52<00:00,  4.05s/it]
+INFO:src.utils.trainer:Epoch 7/50
+Training: 100%|████████████████████████████████| 86/86 [18:47<00:00, 13.11s/it, loss=4.12, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:56<00:00,  4.38s/it]
+INFO:src.utils.trainer:Epoch 8/50
+Training: 100%|████████████████████████████████| 86/86 [20:08<00:00, 14.05s/it, loss=3.75, avg_loss=3.98]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:49<00:00,  3.80s/it]
+INFO:src.utils.trainer:Epoch 9/50
+Training: 100%|████████████████████████████████| 86/86 [19:54<00:00, 13.89s/it, loss=3.68, avg_loss=3.97]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:53<00:00,  4.11s/it]
+INFO:src.utils.trainer:Epoch 10/50
+Training: 100%|█████████████████████████████████| 86/86 [19:55<00:00, 13.90s/it, loss=3.8, avg_loss=3.96]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:57<00:00,  4.46s/it]
+INFO:src.utils.trainer:Epoch 11/50
+Training: 100%|████████████████████████████████| 86/86 [20:36<00:00, 14.37s/it, loss=3.93, avg_loss=3.97]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:50<00:00,  3.86s/it]
+INFO:src.utils.trainer:early stopping triggered after 11 epochs
+INFO:__main__:evaluating on test set...
+Evaluating: 100%|████████████████████████████████████████████████████████| 24/24 [01:30<00:00,  3.75s/it]
+INFO:__main__:generating visualizations...
+Getting predictions:   0%|                                                        | 0/24 [00:08<?, ?it/s]
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.117904..1.5467933].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-1.8044444..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [0.88795525..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.0151556..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.0357141..2.1804092].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.1007793..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-1.6680672..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.117904..2.465708].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-1.9831933..2.622571].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.1007793..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.117904..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.117904..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.0322802..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-2.117904..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-1.9124069..2.64].
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-1.30042..2.64].
+INFO:__main__:saving final model...
+INFO:__main__:pipeline complete!

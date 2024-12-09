@@ -1,0 +1,21 @@
+{"time":"2024-12-07T01:39:01.179597-08:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-07T01:39:01.179657-08:00","level":"INFO","msg":"created symlink","path":"/Users/seunadekunle/school/561/style_classifier/wandb/run-20241207_013901-52mzt4n4/logs/debug-core.log"}
+{"time":"2024-12-07T01:39:01.300675-08:00","level":"INFO","msg":"created new stream","id":"52mzt4n4"}
+{"time":"2024-12-07T01:39:01.300825-08:00","level":"INFO","msg":"stream: started","id":"52mzt4n4"}
+{"time":"2024-12-07T01:39:01.301318-08:00","level":"INFO","msg":"writer: Do: started","stream_id":"52mzt4n4"}
+{"time":"2024-12-07T01:39:01.301524-08:00","level":"INFO","msg":"sender: started","stream_id":"52mzt4n4"}
+{"time":"2024-12-07T01:39:01.301201-08:00","level":"INFO","msg":"handler: started","stream_id":"52mzt4n4"}
+{"time":"2024-12-07T01:39:01.774844-08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-07T03:44:10.506053-08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.135:60835->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2024-12-07T06:06:28.55296-08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.135:49754->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2024-12-07T09:14:22.189358-08:00","level":"INFO","msg":"stream: closing","id":"52mzt4n4"}
+{"time":"2024-12-07T09:14:22.189411-08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-07T09:14:22.192566-08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-07T09:14:22.289422-08:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-12-07T09:14:22.289462-08:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-12-07T09:14:22.289479-08:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-12-07T09:14:22.715743-08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-07T09:14:22.893108-08:00","level":"INFO","msg":"handler: closed","stream_id":"52mzt4n4"}
+{"time":"2024-12-07T09:14:22.893128-08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"52mzt4n4"}
+{"time":"2024-12-07T09:14:22.893409-08:00","level":"INFO","msg":"sender: closed","stream_id":"52mzt4n4"}
+{"time":"2024-12-07T09:14:22.893721-08:00","level":"INFO","msg":"stream: closed","id":"52mzt4n4"}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 255, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 166, in main
+    train_dataset = DeepFashionDataset(args.data_dir, split='train')
+  File "/Users/seunadekunle/school/561/style_classifier/src/data/dataset.py", line 34, in __init__
+    self._create_splits()
+  File "/Users/seunadekunle/school/561/style_classifier/src/data/dataset.py", line 59, in _create_splits
+    with open(attr_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/deepfashion/Anno_fine/list_attr.txt'

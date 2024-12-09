@@ -1,0 +1,120 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 11198 train samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 val samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:58<00:00,  1.48it/s, loss=0.615, avg_loss=0.651]
+INFO:src.utils.trainer:Epoch 2/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:11<00:00,  1.33it/s, loss=0.599, avg_loss=0.603]
+INFO:src.utils.trainer:Epoch 3/50
+Training: 100%|█████████████████████████████████████████████████████████████████████| 175/175 [02:10<00:00,  1.34it/s, loss=0.61, avg_loss=0.598]
+INFO:src.utils.trainer:Epoch 4/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.53it/s, loss=0.586, avg_loss=0.596]
+INFO:src.utils.trainer:Epoch 5/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:47<00:00,  1.63it/s, loss=0.592, avg_loss=0.595]
+INFO:src.utils.trainer:Epoch 6/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:53<00:00,  1.54it/s, loss=0.592, avg_loss=0.594]
+INFO:src.utils.trainer:Epoch 7/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:50<00:00,  1.59it/s, loss=0.599, avg_loss=0.594]
+INFO:src.utils.trainer:Epoch 8/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:48<00:00,  1.62it/s, loss=0.591, avg_loss=0.593]
+INFO:src.utils.trainer:Epoch 9/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:51<00:00,  1.58it/s, loss=0.597, avg_loss=0.593]
+INFO:src.utils.trainer:Epoch 10/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:49<00:00,  1.60it/s, loss=0.584, avg_loss=0.592]
+INFO:src.utils.trainer:Epoch 11/50
+Training: 100%|█████████████████████████████████████████████████████████████████████| 175/175 [01:55<00:00,  1.51it/s, loss=0.59, avg_loss=0.591]
+INFO:src.utils.trainer:Epoch 12/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:04<00:00,  1.41it/s, loss=0.578, avg_loss=0.591]
+INFO:src.utils.trainer:Epoch 13/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.53it/s, loss=0.589, avg_loss=0.591]
+INFO:src.utils.trainer:Epoch 14/50
+Training: 100%|█████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.52it/s, loss=0.586, avg_loss=0.59]
+INFO:src.utils.trainer:Epoch 15/50
+Training: 100%|██████████████████████████████████████████████████████████████████████| 175/175 [01:52<00:00,  1.55it/s, loss=0.59, avg_loss=0.59]
+INFO:src.utils.trainer:Epoch 16/50
+Training: 100%|█████████████████████████████████████████████████████████████████████| 175/175 [01:55<00:00,  1.52it/s, loss=0.581, avg_loss=0.59]
+INFO:src.utils.trainer:Epoch 17/50
+Training: 100%|█████████████████████████████████████████████████████████████████████| 175/175 [01:50<00:00,  1.58it/s, loss=0.585, avg_loss=0.59]
+INFO:src.utils.trainer:Epoch 18/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:56<00:00,  1.50it/s, loss=0.586, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 19/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:53<00:00,  1.54it/s, loss=0.589, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 20/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.53it/s, loss=0.591, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 21/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.53it/s, loss=0.586, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 22/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:53<00:00,  1.55it/s, loss=0.588, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 23/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:07<00:00,  1.37it/s, loss=0.593, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 24/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:55<00:00,  1.51it/s, loss=0.586, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 25/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:53<00:00,  1.54it/s, loss=0.588, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 26/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:17<00:00,  1.27it/s, loss=0.578, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 27/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.52it/s, loss=0.587, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 28/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:58<00:00,  1.48it/s, loss=0.591, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 29/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:59<00:00,  1.46it/s, loss=0.592, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 30/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:56<00:00,  1.50it/s, loss=0.593, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 31/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.53it/s, loss=0.586, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 32/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:54<00:00,  1.53it/s, loss=0.585, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 33/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:03<00:00,  1.42it/s, loss=0.595, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 34/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:02<00:00,  1.43it/s, loss=0.594, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 35/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:06<00:00,  1.38it/s, loss=0.588, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 36/50
+Training: 100%|█████████████████████████████████████████████████████████████████████| 175/175 [01:59<00:00,  1.46it/s, loss=0.59, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 37/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:49<00:00,  1.60it/s, loss=0.598, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 38/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:51<00:00,  1.57it/s, loss=0.589, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 39/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:53<00:00,  1.54it/s, loss=0.584, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 40/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:59<00:00,  1.47it/s, loss=0.588, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 41/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:53<00:00,  1.54it/s, loss=0.597, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 42/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:49<00:00,  1.60it/s, loss=0.592, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 43/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:49<00:00,  1.60it/s, loss=0.594, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 44/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:50<00:00,  1.58it/s, loss=0.595, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 45/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:50<00:00,  1.58it/s, loss=0.608, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 46/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:49<00:00,  1.60it/s, loss=0.592, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 47/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:58<00:00,  1.48it/s, loss=0.589, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 48/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:08<00:00,  1.37it/s, loss=0.587, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 49/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [01:47<00:00,  1.62it/s, loss=0.598, avg_loss=0.589]
+INFO:src.utils.trainer:Epoch 50/50
+Training: 100%|████████████████████████████████████████████████████████████████████| 175/175 [02:01<00:00,  1.44it/s, loss=0.587, avg_loss=0.589]
+INFO:__main__:evaluating on test set...
+Evaluating: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 22/22 [00:07<00:00,  3.09it/s]
+INFO:__main__:generating visualizations...
+Getting predictions: 100%|███████████████████████████████████████████████████████████████████████████████████████| 22/22 [00:07<00:00,  3.00it/s]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 326, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 292, in main
+    embeddings = model.get_embeddings(test_loader)
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+    raise AttributeError(
+AttributeError: 'StyleClassifier' object has no attribute 'get_embeddings'

@@ -1,0 +1,19 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 11198 train samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 val samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 test samples with 26 attributes
+INFO:__main__:running in test mode with smaller dataset
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/2
+Training: 100%|████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.53it/s, loss=0.745, avg_loss=0.733]
+INFO:src.utils.trainer:Epoch 2/2
+Training: 100%|████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.88it/s, loss=0.731, avg_loss=0.731]
+INFO:__main__:evaluating on test set...
+Evaluating: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.69it/s]
+INFO:__main__:generating visualizations...
+Getting predictions: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.83it/s]
+INFO:__main__:saving final model...
+INFO:__main__:pipeline complete!

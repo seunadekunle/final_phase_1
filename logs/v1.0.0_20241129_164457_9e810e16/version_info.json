@@ -1,0 +1,24 @@
+{
+    "version_id": "v1.0.0_20241129_164457_9e810e16",
+    "semantic_version": "1.0.0",
+    "timestamp": "20241129_164457",
+    "config_hash": "9e810e16",
+    "model_config": {
+        "name": "StyleClassifier",
+        "version": "1.0.0",
+        "description": "Initial version of StyleClassifier using CLIP embeddings",
+        "architecture": {
+            "base_model": "CLIP ViT-B/32",
+            "hidden_size": 512,
+            "dropout_rate": 0.1,
+            "num_categories": 49,
+            "num_attributes": 26
+        },
+        "training": {
+            "batch_size": 32,
+            "learning_rate": 0.0001,
+            "num_epochs": 30,
+            "optimizer": "Adam"
+        }
+    }
+}

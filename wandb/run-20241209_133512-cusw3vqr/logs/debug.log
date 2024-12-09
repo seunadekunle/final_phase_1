@@ -1,0 +1,26 @@
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Configure stats pid to 56911
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Loading settings from /Users/seunadekunle/.config/wandb/settings
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Loading settings from /Users/seunadekunle/school/567/style_classifier/wandb/settings
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'src/training/train_darn.py', 'program_abspath': '/Users/seunadekunle/school/567/style_classifier/src/training/train_darn.py', 'program': '/Users/seunadekunle/school/567/style_classifier/src/training/train_darn.py'}
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-12-09 13:35:12,639 INFO    MainThread:56911 [wandb_init.py:_log_setup():533] Logging user logs to /Users/seunadekunle/school/567/style_classifier/wandb/run-20241209_133512-cusw3vqr/logs/debug.log
+2024-12-09 13:35:12,640 INFO    MainThread:56911 [wandb_init.py:_log_setup():534] Logging internal logs to /Users/seunadekunle/school/567/style_classifier/wandb/run-20241209_133512-cusw3vqr/logs/debug-internal.log
+2024-12-09 13:35:12,640 INFO    MainThread:56911 [wandb_init.py:init():619] calling init triggers
+2024-12-09 13:35:12,640 INFO    MainThread:56911 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {'data_root': 'data_deepfashion', 'batch_size': 32, 'num_workers': 4, 'backbone': 'resnet34', 'embedding_dim': 512, 'dropout': 0.5, 'epochs': 50, 'lr': 0.0001, 'weight_decay': 0.0001, 'margin': 0.3, 'attribute_weight': 1.0, 'ranking_weight': 1.0, 'label_smoothing': 0.1, 'scheduler': 'cosine', 'warmup_epochs': 5, 'min_lr': 1e-06, 'log_dir': 'logs', 'checkpoint_dir': 'checkpoints', 'experiment_name': 'darn_resnet34_baseline', 'wandb': True, 'visualize_every': 5, 'test_mode': True}
+2024-12-09 13:35:12,640 INFO    MainThread:56911 [wandb_init.py:init():669] starting backend
+2024-12-09 13:35:12,640 INFO    MainThread:56911 [wandb_init.py:init():673] sending inform_init request
+2024-12-09 13:35:12,642 INFO    MainThread:56911 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-12-09 13:35:12,642 INFO    MainThread:56911 [wandb_init.py:init():686] backend started and connected
+2024-12-09 13:35:12,646 INFO    MainThread:56911 [wandb_init.py:init():781] updated telemetry
+2024-12-09 13:35:12,647 INFO    MainThread:56911 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2024-12-09 13:35:45,313 INFO    MainThread:56911 [wandb_init.py:init():867] starting run threads in backend
+2024-12-09 13:35:45,411 INFO    MainThread:56911 [wandb_run.py:_console_start():2456] atexit reg
+2024-12-09 13:35:45,411 INFO    MainThread:56911 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2024-12-09 13:35:45,412 INFO    MainThread:56911 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2024-12-09 13:35:45,412 INFO    MainThread:56911 [wandb_run.py:_redirect():2395] Redirects installed.
+2024-12-09 13:35:45,414 INFO    MainThread:56911 [wandb_init.py:init():911] run started, returning control to user process
+2024-12-09 13:35:46,884 WARNING MsgRouterThr:56911 [router.py:message_loop():75] message_loop has been closed

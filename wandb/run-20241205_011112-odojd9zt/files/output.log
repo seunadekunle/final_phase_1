@@ -1,0 +1,256 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 11198 train samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 val samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:Epoch 1/50
+Training: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 26.28it/s, loss=0.457, avg_loss=1.33]
+INFO:__main__:Train Loss: 1.3282, Val Loss: 0.1297
+INFO:__main__:Epoch 2/50
+Training: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 30.42it/s, loss=0.303, avg_loss=0.332]
+INFO:__main__:Train Loss: 0.3315, Val Loss: 0.0336
+INFO:__main__:Epoch 3/50
+Training: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 30.26it/s, loss=0.155, avg_loss=0.216]
+INFO:__main__:Train Loss: 0.2160, Val Loss: 0.0135
+INFO:__main__:Epoch 4/50
+Training: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.70it/s, loss=0.19, avg_loss=0.164]
+INFO:__main__:Train Loss: 0.1642, Val Loss: 0.0072
+INFO:__main__:Epoch 5/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.19it/s, loss=0.0988, avg_loss=0.137]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.1368, Val Loss: 0.0041
+INFO:__main__:Epoch 6/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 33.53it/s, loss=0.0822, avg_loss=0.118]
+INFO:__main__:Train Loss: 0.1180, Val Loss: 0.0025
+INFO:__main__:Epoch 7/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 33.93it/s, loss=0.0943, avg_loss=0.106]
+INFO:__main__:Train Loss: 0.1058, Val Loss: 0.0017
+INFO:__main__:Epoch 8/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.05it/s, loss=0.0993, avg_loss=0.0955]
+INFO:__main__:Train Loss: 0.0955, Val Loss: 0.0012
+INFO:__main__:Epoch 9/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 34.38it/s, loss=0.073, avg_loss=0.0872]
+INFO:__main__:Train Loss: 0.0872, Val Loss: 0.0008
+INFO:__main__:Epoch 10/50
+Training: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.74it/s, loss=0.11, avg_loss=0.0811]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0811, Val Loss: 0.0006
+INFO:__main__:Epoch 11/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 28.95it/s, loss=0.0583, avg_loss=0.0747]
+INFO:__main__:Train Loss: 0.0747, Val Loss: 0.0005
+INFO:__main__:Epoch 12/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.14it/s, loss=0.0569, avg_loss=0.0722]
+INFO:__main__:Train Loss: 0.0722, Val Loss: 0.0004
+INFO:__main__:Epoch 13/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.04it/s, loss=0.0664, avg_loss=0.0694]
+INFO:__main__:Train Loss: 0.0694, Val Loss: 0.0003
+INFO:__main__:Epoch 14/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 30.56it/s, loss=0.0598, avg_loss=0.0647]
+INFO:__main__:Train Loss: 0.0647, Val Loss: 0.0002
+INFO:__main__:Epoch 15/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.95it/s, loss=0.0724, avg_loss=0.0628]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0628, Val Loss: 0.0002
+INFO:__main__:Epoch 16/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 28.98it/s, loss=0.064, avg_loss=0.0574]
+INFO:__main__:Train Loss: 0.0574, Val Loss: 0.0001
+INFO:__main__:Epoch 17/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 29.21it/s, loss=0.0674, avg_loss=0.0527]
+INFO:__main__:Train Loss: 0.0527, Val Loss: 0.0001
+INFO:__main__:Epoch 18/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 30.52it/s, loss=0.0681, avg_loss=0.0522]
+INFO:__main__:Train Loss: 0.0522, Val Loss: 0.0001
+INFO:__main__:Epoch 19/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 28.01it/s, loss=0.0375, avg_loss=0.0477]
+INFO:__main__:Train Loss: 0.0477, Val Loss: 0.0001
+INFO:__main__:Epoch 20/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 30.88it/s, loss=0.0281, avg_loss=0.0487]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0487, Val Loss: 0.0001
+INFO:__main__:Epoch 21/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 33.39it/s, loss=0.0216, avg_loss=0.0464]
+INFO:__main__:Train Loss: 0.0464, Val Loss: 0.0001
+INFO:__main__:Epoch 22/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 26.38it/s, loss=0.0354, avg_loss=0.045]
+INFO:__main__:Train Loss: 0.0450, Val Loss: 0.0000
+INFO:__main__:Epoch 23/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.97it/s, loss=0.0332, avg_loss=0.0422]
+INFO:__main__:Train Loss: 0.0422, Val Loss: 0.0000
+INFO:__main__:Epoch 24/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:07<00:00, 22.71it/s, loss=0.014, avg_loss=0.0404]
+INFO:__main__:Train Loss: 0.0404, Val Loss: 0.0000
+INFO:__main__:Epoch 25/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 33.50it/s, loss=0.0549, avg_loss=0.042]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0420, Val Loss: 0.0000
+INFO:__main__:Epoch 26/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 27.48it/s, loss=0.0367, avg_loss=0.0396]
+INFO:__main__:Train Loss: 0.0396, Val Loss: 0.0000
+INFO:__main__:Epoch 27/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 29.78it/s, loss=0.0577, avg_loss=0.0381]
+INFO:__main__:Train Loss: 0.0381, Val Loss: 0.0000
+INFO:__main__:Epoch 28/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 29.07it/s, loss=0.0373, avg_loss=0.0351]
+INFO:__main__:Train Loss: 0.0351, Val Loss: 0.0000
+INFO:__main__:Epoch 29/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 29.84it/s, loss=0.0193, avg_loss=0.0343]
+INFO:__main__:Train Loss: 0.0343, Val Loss: 0.0000
+INFO:__main__:Epoch 30/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 33.93it/s, loss=0.0345, avg_loss=0.0332]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0332, Val Loss: 0.0000
+INFO:__main__:Epoch 31/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 28.72it/s, loss=0.0267, avg_loss=0.0357]
+INFO:__main__:Train Loss: 0.0357, Val Loss: 0.0000
+INFO:__main__:Epoch 32/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 33.50it/s, loss=0.0524, avg_loss=0.0334]
+INFO:__main__:Train Loss: 0.0334, Val Loss: 0.0000
+INFO:__main__:Epoch 33/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 33.31it/s, loss=0.0332, avg_loss=0.0314]
+INFO:__main__:Train Loss: 0.0314, Val Loss: 0.0000
+INFO:__main__:Epoch 34/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.55it/s, loss=0.0245, avg_loss=0.0292]
+INFO:__main__:Train Loss: 0.0292, Val Loss: 0.0000
+INFO:__main__:Epoch 35/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 30.05it/s, loss=0.0272, avg_loss=0.0274]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0274, Val Loss: 0.0000
+INFO:__main__:Epoch 36/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 28.58it/s, loss=0.0135, avg_loss=0.0265]
+INFO:__main__:Train Loss: 0.0265, Val Loss: 0.0000
+INFO:__main__:Epoch 37/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:07<00:00, 24.03it/s, loss=0.0326, avg_loss=0.0259]
+INFO:__main__:Train Loss: 0.0259, Val Loss: 0.0000
+INFO:__main__:Epoch 38/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.06it/s, loss=0.0326, avg_loss=0.0279]
+INFO:__main__:Train Loss: 0.0279, Val Loss: 0.0000
+INFO:__main__:Epoch 39/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 29.33it/s, loss=0.021, avg_loss=0.0266]
+INFO:__main__:Train Loss: 0.0266, Val Loss: 0.0000
+INFO:__main__:Epoch 40/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.77it/s, loss=0.0189, avg_loss=0.0245]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0245, Val Loss: 0.0000
+INFO:__main__:Epoch 41/50
+Training: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.98it/s, loss=0.00766, avg_loss=0.0235]
+INFO:__main__:Train Loss: 0.0235, Val Loss: 0.0000
+INFO:__main__:Epoch 42/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 32.74it/s, loss=0.0189, avg_loss=0.0257]
+INFO:__main__:Train Loss: 0.0257, Val Loss: 0.0000
+INFO:__main__:Epoch 43/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.70it/s, loss=0.0457, avg_loss=0.0257]
+INFO:__main__:Train Loss: 0.0257, Val Loss: 0.0000
+INFO:__main__:Epoch 44/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.88it/s, loss=0.0275, avg_loss=0.0236]
+INFO:__main__:Train Loss: 0.0236, Val Loss: 0.0000
+INFO:__main__:Epoch 45/50
+Training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:06<00:00, 28.73it/s, loss=0.0272, avg_loss=0.024]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0240, Val Loss: 0.0000
+INFO:__main__:Epoch 46/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 30.46it/s, loss=0.0144, avg_loss=0.0235]
+INFO:__main__:Train Loss: 0.0235, Val Loss: 0.0000
+INFO:__main__:Epoch 47/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 29.39it/s, loss=0.0119, avg_loss=0.0216]
+INFO:__main__:Train Loss: 0.0216, Val Loss: 0.0000
+INFO:__main__:Epoch 48/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.02it/s, loss=0.0354, avg_loss=0.0207]
+INFO:__main__:Train Loss: 0.0207, Val Loss: 0.0000
+INFO:__main__:Epoch 49/50
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 29.38it/s, loss=0.0058, avg_loss=0.0212]
+INFO:__main__:Train Loss: 0.0212, Val Loss: 0.0000
+INFO:__main__:Epoch 50/50
+Training: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 175/175 [00:05<00:00, 31.32it/s, loss=0.0131, avg_loss=0.02]
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:matplotlib.category:Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+INFO:__main__:Train Loss: 0.0200, Val Loss: 0.0000

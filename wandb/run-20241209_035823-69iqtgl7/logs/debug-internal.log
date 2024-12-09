@@ -1,0 +1,19 @@
+{"time":"2024-12-09T03:58:23.209701-08:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-09T03:58:23.209763-08:00","level":"INFO","msg":"created symlink","path":"/Users/seunadekunle/school/567/style_classifier/wandb/run-20241209_035823-69iqtgl7/logs/debug-core.log"}
+{"time":"2024-12-09T03:58:23.325661-08:00","level":"INFO","msg":"created new stream","id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:23.325974-08:00","level":"INFO","msg":"stream: started","id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:23.326053-08:00","level":"INFO","msg":"sender: started","stream_id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:23.326212-08:00","level":"INFO","msg":"writer: Do: started","stream_id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:23.326209-08:00","level":"INFO","msg":"handler: started","stream_id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:23.511022-08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-09T03:58:48.144877-08:00","level":"INFO","msg":"stream: closing","id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:48.145126-08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-09T03:58:48.145554-08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-09T03:58:48.249451-08:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-12-09T03:58:48.249488-08:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-12-09T03:58:48.249497-08:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-12-09T03:58:48.611223-08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-09T03:58:48.771366-08:00","level":"INFO","msg":"handler: closed","stream_id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:48.77138-08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:48.771384-08:00","level":"INFO","msg":"sender: closed","stream_id":"69iqtgl7"}
+{"time":"2024-12-09T03:58:48.771575-08:00","level":"INFO","msg":"stream: closed","id":"69iqtgl7"}

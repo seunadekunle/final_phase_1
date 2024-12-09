@@ -1,0 +1,11 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 11198 train samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 val samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 test samples with 26 attributes
+INFO:__main__:creating model...
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 324, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 239, in main
+    attribute_dims=train_dataset.attribute_dims,
+AttributeError: 'StyleDataset' object has no attribute 'attribute_dims'

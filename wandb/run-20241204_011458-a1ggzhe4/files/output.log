@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 255, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/src/train_compare.py", line 166, in main
+    train_dataset = DeepFashionDataset(args.data_dir, split='train')
+TypeError: __init__() got an unexpected keyword argument 'split'

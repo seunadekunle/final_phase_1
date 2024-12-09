@@ -1,0 +1,7 @@
+INFO:__main__:creating datasets...
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 333, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 228, in main
+    train_dataset = StyleDataset(split='train')
+TypeError: __init__() missing 1 required positional argument: 'data_dir'

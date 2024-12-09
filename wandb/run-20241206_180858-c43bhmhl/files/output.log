@@ -1,0 +1,14 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 0 train samples with 26 attributes
+INFO:src.data.dataset:loaded 0 val samples with 26 attributes
+INFO:src.data.dataset:loaded 0 test samples with 26 attributes
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 539, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 331, in main
+    train_loader = DataLoader(
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 376, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/utils/data/sampler.py", line 164, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0

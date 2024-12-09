@@ -1,0 +1,20 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 2744 train samples with 26 attributes
+INFO:src.data.dataset:loaded 385 val samples with 26 attributes
+INFO:src.data.dataset:loaded 747 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training: 100%|████████████████████████████████| 86/86 [34:21<00:00, 23.97s/it, loss=4.04, avg_loss=4.45]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 539, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 393, in main
+    trainer.train()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 191, in train
+    train_loss, train_acc = self.train_epoch()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 151, in train_epoch
+    self.scheduler.step()
+TypeError: step() missing 1 required positional argument: 'metrics'

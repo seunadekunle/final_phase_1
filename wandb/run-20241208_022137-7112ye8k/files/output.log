@@ -1,0 +1,66 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 2744 train samples with 26 attributes
+INFO:src.data.dataset:loaded 385 val samples with 26 attributes
+INFO:src.data.dataset:loaded 747 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training: 100%|█████████████████████████████████| 86/86 [21:23<00:00, 14.92s/it, loss=4.1, avg_loss=4.46]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:52<00:00,  4.01s/it]
+INFO:src.utils.trainer:Epoch 2/50
+Training: 100%|████████████████████████████████| 86/86 [20:53<00:00, 14.58s/it, loss=4.21, avg_loss=4.07]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:52<00:00,  4.02s/it]
+INFO:src.utils.trainer:Epoch 3/50
+Training: 100%|████████████████████████████████| 86/86 [19:54<00:00, 13.89s/it, loss=3.81, avg_loss=4.04]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:52<00:00,  4.04s/it]
+INFO:src.utils.trainer:Epoch 4/50
+Training: 100%|████████████████████████████████| 86/86 [19:55<00:00, 13.90s/it, loss=3.69, avg_loss=4.01]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:50<00:00,  3.85s/it]
+INFO:src.utils.trainer:Epoch 5/50
+Training: 100%|████████████████████████████████| 86/86 [21:30<00:00, 15.00s/it, loss=3.73, avg_loss=4.04]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [00:55<00:00,  4.26s/it]
+INFO:src.utils.trainer:Epoch 6/50
+Training: 100%|███████████████████████████████████| 86/86 [20:54<00:00, 14.59s/it, loss=4.13, avg_loss=4]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:03<00:00,  4.91s/it]
+INFO:src.utils.trainer:Epoch 7/50
+Training: 100%|████████████████████████████████| 86/86 [38:37<00:00, 26.95s/it, loss=3.85, avg_loss=4.01]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:14<00:00,  5.75s/it]
+INFO:src.utils.trainer:Epoch 8/50
+Training: 100%|████████████████████████████████████| 86/86 [28:01<00:00, 19.56s/it, loss=4.2, avg_loss=4]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:20<00:00,  6.16s/it]
+INFO:src.utils.trainer:Epoch 9/50
+Training: 100%|████████████████████████████████| 86/86 [28:05<00:00, 19.60s/it, loss=4.18, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:16<00:00,  5.91s/it]
+INFO:src.utils.trainer:Epoch 10/50
+Training: 100%|████████████████████████████████| 86/86 [27:18<00:00, 19.05s/it, loss=4.16, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:14<00:00,  5.73s/it]
+INFO:src.utils.trainer:Epoch 11/50
+Training: 100%|████████████████████████████████| 86/86 [27:32<00:00, 19.22s/it, loss=4.05, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:12<00:00,  5.55s/it]
+INFO:src.utils.trainer:Epoch 12/50
+Training: 100%|███████████████████████████████████| 86/86 [27:00<00:00, 18.84s/it, loss=4, avg_loss=3.99]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:11<00:00,  5.53s/it]
+INFO:src.utils.trainer:Epoch 13/50
+Training: 100%|████████████████████████████████| 86/86 [26:59<00:00, 18.83s/it, loss=3.86, avg_loss=3.97]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:11<00:00,  5.50s/it]
+INFO:src.utils.trainer:Epoch 14/50
+Training: 100%|████████████████████████████████| 86/86 [27:01<00:00, 18.86s/it, loss=3.97, avg_loss=3.96]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:10<00:00,  5.43s/it]
+INFO:src.utils.trainer:Epoch 15/50
+Training: 100%|████████████████████████████████| 86/86 [29:47<00:00, 20.79s/it, loss=3.96, avg_loss=3.97]
+Validating: 100%|████████████████████████████████████████████████████████| 13/13 [01:10<00:00,  5.39s/it]
+INFO:src.utils.trainer:early stopping triggered after 15 epochs
+INFO:__main__:evaluating on test set...
+Evaluating: 100%|████████████████████████████████████████████████████████| 24/24 [02:08<00:00,  5.37s/it]
+INFO:__main__:generating visualizations...
+Getting predictions:   0%|                                                        | 0/24 [00:10<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 540, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 415, in main
+    visualize_predictions(
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 514, in visualize_predictions
+    fig, axes = plt.subplots(4, 4, figsize=(20, 20))
+NameError: name 'plt' is not defined

@@ -1,0 +1,20 @@
+INFO:__main__:creating datasets...
+INFO:src.data.dataset:loaded 11198 train samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 val samples with 26 attributes
+INFO:src.data.dataset:loaded 1400 test samples with 26 attributes
+INFO:__main__:creating model...
+/Users/seunadekunle/miniconda3/envs/style_classifier/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:starting training...
+INFO:src.utils.trainer:Epoch 1/50
+Training:   0%|                                                                                                                                                         | 0/175 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 325, in <module>
+    main()
+  File "/Users/seunadekunle/school/561/style_classifier/train.py", line 264, in main
+    trainer.train()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 135, in train
+    train_metrics = self.train_epoch()
+  File "/Users/seunadekunle/school/561/style_classifier/src/utils/trainer.py", line 70, in train_epoch
+    images = batch['image'].to(self.device)
+TypeError: list indices must be integers or slices, not str
