@@ -76,6 +76,9 @@ class DARN(nn.Module):
         self.backbone = self._get_backbone(backbone, pretrained)
         backbone_dim = self._get_backbone_dim(backbone)
         
+        # Add adaptive pooling for ResNet
+        self.adaptive_pool = nn.AdaptiveAvgPool2d((1, 1))
+        
         # Global branch
         self.global_branch = nn.Sequential(
             nn.Linear(backbone_dim, embedding_dim),
@@ -155,8 +158,8 @@ class DARN(nn.Module):
         """
         # Extract backbone features
         features = self.backbone(x)
-        if len(features.shape) > 2:
-            features = features.view(features.size(0), -1)
+        features = self.adaptive_pool(features)
+        features = features.view(features.size(0), -1)
         
         # Global branch
         global_features = self.global_branch(features)

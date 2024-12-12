@@ -442,9 +442,9 @@ def main():
     # Create loss function
     criterion = DARNLoss(
         margin=args.margin,
-        lambda_attr=args.attribute_weight,
         lambda_rank=args.ranking_weight,
-    ).to(device)
+        lambda_attr=args.attribute_weight
+    )
     
     optimizer = optim.Adam(
         model.parameters(),
