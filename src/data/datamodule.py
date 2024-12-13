@@ -1,4 +1,9 @@
-"""Data Module for Managing DeepFashion Dataset Splits and Dataloaders"""
+"""
+DeepFashion Dataset Management Module.
+
+This Module Provides a Unified Interface for Managing Dataset Splits,
+DataLoaders, and Data Processing for the DeepFashion Dataset.
+"""
 
 from typing import Optional
 
@@ -8,37 +13,41 @@ from torch.utils.data import DataLoader
 from .dataset import DeepFashionDataset
 
 class DeepFashionDataModule:
-    """Data Module for Managing DeepFashion Dataset Loading and Preprocessing
+    """
+    Data Management System for DeepFashion Dataset.
     
-    Args:
-        config: configuration object containing data parameters
-        image_size: optional override for image size (default: None)
+    Features:
+        - Dataset Loading and Preprocessing
+        - DataLoader Configuration
+        - Split Management (Train/Val/Test)
+        - Dynamic Image Size Updates
     """
     
     def __init__(self, config, image_size=None):
-        """Initialize Data Module
+        """
+        Initialize Data Module Components.
         
         Args:
-            config: configuration object with data parameters
-                - data_dir: path to dataset directory
-                - batch_size: batch size for dataloaders
-                - num_workers: number of workers for dataloaders
-                - image_size: size to resize images to
-                - category_list_file: path to category list file
-                - attribute_list_file: path to attribute list file
-                - train_split: name of training split file
-                - val_split: name of validation split file
-                - test_split: name of test split file
-                - train_category: name of training category labels file
-                - val_category: name of validation category labels file
-                - test_category: name of test category labels file
-                - train_attr: name of training attribute labels file
-                - val_attr: name of validation attribute labels file
-                - test_attr: name of test attribute labels file
-                - train_bbox: name of training bbox file
-                - val_bbox: name of validation bbox file
-                - test_bbox: name of test bbox file
-            image_size: optional override for config image size
+            config: Configuration object containing:
+                - data_dir: Dataset directory path
+                - batch_size: Training batch size
+                - num_workers: DataLoader workers
+                - image_size: Image dimensions
+                - category_list_file: Category list path
+                - attribute_list_file: Attribute list path
+                - train_split: Training split file
+                - val_split: Validation split file
+                - test_split: Test split file
+                - train_category: Training category labels
+                - val_category: Validation category labels
+                - test_category: Test category labels
+                - train_attr: Training attribute labels
+                - val_attr: Validation attribute labels
+                - test_attr: Test attribute labels
+                - train_bbox: Training bounding boxes
+                - val_bbox: Validation bounding boxes
+                - test_bbox: Test bounding boxes
+            image_size: Optional override for config image size
         """
         self.config = config
         self.image_size = image_size or config.image_size
@@ -47,7 +56,7 @@ class DeepFashionDataModule:
         self.test_dataset: Optional[DeepFashionDataset] = None
         
     def setup(self):
-        """Set Up All Dataset Splits"""
+        """Set Up All Dataset Splits and Initialize Properties."""
         # create training dataset
         self.train_dataset = DeepFashionDataset(
             data_dir=self.config.data_dir,
@@ -84,15 +93,16 @@ class DeepFashionDataModule:
             image_size=self.image_size
         )
         
-        # store dataset properties for model initialization
+        # store dataset properties for model
         self.num_categories = self.train_dataset.num_categories
         self.num_attributes = self.train_dataset.num_attributes
         
     def update_image_size(self, new_size):
-        """Update Image Size for All Datasets
+        """
+        Update Image Size for All Dataset Splits.
         
         Args:
-            new_size: new image size to use
+            new_size: New image dimensions to use
         """
         self.image_size = new_size
         if self.train_dataset:
@@ -103,7 +113,7 @@ class DeepFashionDataModule:
             self.test_dataset.image_size = new_size
         
     def train_dataloader(self):
-        """Create Training Dataloader"""
+        """Create Training DataLoader with Shuffling."""
         return DataLoader(
             self.train_dataset,
             batch_size=self.config.batch_size,
@@ -113,7 +123,7 @@ class DeepFashionDataModule:
         )
         
     def val_dataloader(self):
-        """Create Validation Dataloader"""
+        """Create Validation DataLoader."""
         return DataLoader(
             self.val_dataset,
             batch_size=self.config.batch_size,
@@ -123,7 +133,7 @@ class DeepFashionDataModule:
         )
         
     def test_dataloader(self):
-        """Create Test Dataloader"""
+        """Create Test DataLoader."""
         return DataLoader(
             self.test_dataset,
             batch_size=self.config.batch_size,

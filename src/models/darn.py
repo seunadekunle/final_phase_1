@@ -2,7 +2,7 @@
 Implementation of the Dual Attribute-aware Ranking Network (DARN).
 
 This Module Contains the PyTorch Implementation of the DARN Architecture
-for Fine-grained Attribute Prediction on Fashion Images.
+For Fine-grained Attribute Prediction on Fashion Images.
 
 Reference:
     "DARN: A Deep Attentive Recurrent Network for Learning Attribute-Specific
@@ -16,7 +16,7 @@ import torch.nn.functional as F
 from typing import Tuple, Dict
 
 class AttributeAttention(nn.Module):
-    """Attribute-aware Attention Module."""
+    """Attribute-aware Attention Module for Feature Weighting."""
     
     def __init__(self, in_features: int, num_attributes: int):
         super().__init__()
@@ -29,7 +29,7 @@ class AttributeAttention(nn.Module):
         
     def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
         """
-        Apply Attribute-specific Attention.
+        Apply Attribute-specific Attention to Input Features.
         
         Args:
             x: Input features (batch_size, in_features)
@@ -39,7 +39,9 @@ class AttributeAttention(nn.Module):
             - Attended features (batch_size, in_features)
             - Attention weights (batch_size, num_attributes)
         """
+        # compute attention weights
         attention_weights = self.attention(x)
+        # apply attention to features
         attended_features = x.unsqueeze(1) * attention_weights.unsqueeze(-1)
         attended_features = attended_features.mean(dim=1)
         return attended_features, attention_weights
@@ -49,9 +51,9 @@ class DARN(nn.Module):
     Dual Attribute-aware Ranking Network for Fine-grained Attribute Prediction.
     
     Features:
-    - VGG16 backbone with feature pyramid
-    - Dual attribute-aware attention branches
-    - Attribute prediction with ranking capability
+        - VGG16 Backbone with Feature Pyramid
+        - Dual Attribute-aware Attention Branches
+        - Attribute Prediction with Ranking Capability
     """
     
     def __init__(
@@ -62,7 +64,7 @@ class DARN(nn.Module):
         pretrained: bool = True
     ):
         """
-        Initialize DARN Model.
+        Initialize DARN Model Components.
         
         Args:
             num_attributes: Number of attributes to predict
@@ -107,7 +109,16 @@ class DARN(nn.Module):
         self._init_weights()
         
     def _get_backbone(self, backbone_name: str, pretrained: bool) -> nn.Module:
-        """Get Pretrained Backbone CNN."""
+        """
+        Get Pretrained Backbone CNN Architecture.
+        
+        Args:
+            backbone_name: Name of the backbone to use
+            pretrained: Whether to use pretrained weights
+            
+        Returns:
+            Backbone CNN module
+        """
         if backbone_name == "vgg16":
             model = models.vgg16(pretrained=pretrained)
             return nn.Sequential(*list(model.features.children()))
@@ -126,7 +137,15 @@ class DARN(nn.Module):
         raise ValueError(f"Unsupported backbone: {backbone_name}")
     
     def _get_backbone_dim(self, backbone_name: str) -> int:
-        """Get Backbone Output Dimension."""
+        """
+        Get Output Dimension of Backbone CNN.
+        
+        Args:
+            backbone_name: Name of the backbone
+            
+        Returns:
+            Output dimension of the backbone
+        """
         if backbone_name == "vgg16":
             return 512 * 7 * 7  # vgg16 output size with 224x224 input
         elif backbone_name == "resnet34":
@@ -134,7 +153,7 @@ class DARN(nn.Module):
         raise ValueError(f"Unsupported backbone: {backbone_name}")
     
     def _init_weights(self):
-        """Initialize Model Weights."""
+        """Initialize Model Weights Using Kaiming Initialization."""
         for m in self.modules():
             if isinstance(m, nn.Linear):
                 nn.init.kaiming_normal_(m.weight)
@@ -161,11 +180,11 @@ class DARN(nn.Module):
         features = self.adaptive_pool(features)
         features = features.view(features.size(0), -1)
         
-        # global branch
+        # global branch processing
         global_features = self.global_branch(features)
         global_attended, global_attention = self.global_attention(global_features)
         
-        # local branch
+        # local branch processing
         local_features = self.local_branch(features)
         local_attended, local_attention = self.local_attention(local_features)
         
@@ -193,10 +212,12 @@ class DARN(nn.Module):
         Returns:
             Combined embedding from both branches
         """
+        # extract features
         features = self.backbone(x)
         if len(features.shape) > 2:
             features = features.view(features.size(0), -1)
             
+        # get branch features
         global_features = self.global_branch(features)
         local_features = self.local_branch(features)
         
