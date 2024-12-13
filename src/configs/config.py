@@ -1,4 +1,4 @@
-"""configuration module for attribute classification model training and evaluation"""
+"""Configuration Module for Attribute Classification Model Training and Evaluation"""
 
 from dataclasses import dataclass
 from pathlib import Path

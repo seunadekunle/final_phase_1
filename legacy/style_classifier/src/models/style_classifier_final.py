@@ -11,7 +11,7 @@ this version includes:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, Tuple, Optional
 import logging
 from torchvision.models import resnet50, ResNet50_Weights
 from pathlib import Path
@@ -25,7 +25,7 @@ class AttentionModule(nn.Module):
         self.norm = nn.LayerNorm(dim)
         self.mha = nn.MultiheadAttention(dim, num_heads, dropout=dropout)
         
-        # Spatial attention
+        # spatial attention
         self.spatial_attention = nn.Sequential(
             nn.Conv2d(dim, dim//8, 1),
             nn.ReLU(),
@@ -33,7 +33,7 @@ class AttentionModule(nn.Module):
             nn.Sigmoid()
         )
         
-        # Channel attention
+        # channel attention
         self.channel_attention = nn.Sequential(
             nn.AdaptiveAvgPool2d(1),
             nn.Conv2d(dim, dim//8, 1),
@@ -45,21 +45,21 @@ class AttentionModule(nn.Module):
         self.dropout = nn.Dropout(dropout)
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        # Apply spatial and channel attention
+        # apply spatial and channel attention
         spatial_weights = self.spatial_attention(x)
         channel_weights = self.channel_attention(x)
         attended = x * spatial_weights * channel_weights
         
-        # Reshape for multi-head attention
+        # reshape for multi-head attention
         b, c, h, w = attended.shape
         attended = attended.flatten(2).permute(2, 0, 1)  # (h*w, b, c)
         
-        # Apply multi-head attention
+        # apply multi-head attention
         attended = self.norm(attended)
         mha_out, _ = self.mha(attended, attended, attended)
         attended = self.dropout(mha_out)
         
-        # Reshape back
+        # reshape back
         attended = attended.permute(1, 2, 0).view(b, c, h, w)
         return attended
 
@@ -87,8 +87,7 @@ class ResidualBlock(nn.Module):
 
 class StyleClassifier(nn.Module):
     """hierarchical style classifier with attention and contrastive learning"""
-    
-    # Fixed attribute groups matching dataset structure
+    # fixed attribute groups matching dataset structure
     ATTRIBUTE_GROUPS = {
         'texture': list(range(0, 6)),    # 6 texture attributes
         'fabric': list(range(6, 11)),    # 5 fabric attributes
@@ -119,7 +118,7 @@ class StyleClassifier(nn.Module):
         super().__init__()
         self.device = device
         
-        # Verify attribute count matches groups
+        # verify attribute count matches groups
         total_attrs = sum(len(indices) for indices in self.ATTRIBUTE_GROUPS.values())
         if total_attrs != num_attributes:
             raise ValueError(
@@ -132,7 +131,7 @@ class StyleClassifier(nn.Module):
         self.backbone = nn.Sequential(*list(resnet.children())[:-2])
         backbone_dim = 2048
         
-        # Freeze early layers
+        # freeze early layers
         for param in self.backbone[:6].parameters():
             param.requires_grad = False
         
@@ -143,7 +142,7 @@ class StyleClassifier(nn.Module):
             dropout=dropout
         )
         
-        # Feature pyramid
+        # feature pyramid
         self.fpn = nn.ModuleList([
             nn.Sequential(
                 nn.Conv2d(backbone_dim, hidden_dim, 1),
@@ -153,7 +152,7 @@ class StyleClassifier(nn.Module):
             ) for _ in range(4)
         ])
         
-        # Feature projection
+        # feature projection
         self.projection = nn.Sequential(
             nn.Conv2d(backbone_dim, hidden_dim, 1),
             nn.BatchNorm2d(hidden_dim),
@@ -165,24 +164,24 @@ class StyleClassifier(nn.Module):
             nn.Dropout(dropout)
         )
         
-        # Group encoders with residual connections
+        # group encoders with residual connections
         self.group_encoders = nn.ModuleDict()
         for group_name, indices in self.ATTRIBUTE_GROUPS.items():
             layers = []
             input_size = len(indices)
             
-            # Initial projection to hidden_dim
+            # initial projection to hidden_dim
             layers.append(nn.Linear(input_size, hidden_dim))
             layers.append(nn.ReLU())
             layers.append(nn.Dropout(dropout))
             
-            # Residual blocks
+            # residual blocks
             for _ in range(num_layers):
                 layers.append(ResidualBlock(hidden_dim, hidden_dim * 4, dropout))
             
             self.group_encoders[group_name] = nn.Sequential(*layers)
         
-        # Group attention for cross-group feature fusion
+        # Ggoup attention for cross-group feature fusion
         self.group_attention = nn.ModuleDict()
         for g1 in self.ATTRIBUTE_GROUPS:
             self.group_attention[g1] = nn.MultiheadAttention(
@@ -191,7 +190,7 @@ class StyleClassifier(nn.Module):
                 dropout=dropout
             )
         
-        # Final prediction heads
+        # final prediction heads
         self.group_predictors = nn.ModuleDict()
         for group_name, indices in self.ATTRIBUTE_GROUPS.items():
             self.group_predictors[group_name] = nn.Sequential(
@@ -202,7 +201,7 @@ class StyleClassifier(nn.Module):
                 nn.Linear(hidden_dim, len(indices))
             )
         
-        # Style-specific contrastive head
+        # style-specific contrastive head
         self.style_projector = nn.Sequential(
             nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
@@ -264,14 +263,14 @@ class StyleClassifier(nn.Module):
         # Process each attribute group
         group_features = {}
         for group_name, indices in self.ATTRIBUTE_GROUPS.items():
-            # Extract group features
+            # Eetract group features
             group_input = projected[:, :len(indices)]
             group_features[group_name] = self.group_encoders[group_name](group_input)
         
-        # Cross-group attention
+        # cross-group attention
         enhanced_features = {}
         for g1, feat1 in group_features.items():
-            # Gather features from other groups
+            # gather features from other groups
             other_feats = [f for g2, f in group_features.items() if g2 != g1]
             if other_feats:
                 # Apply attention
@@ -285,13 +284,13 @@ class StyleClassifier(nn.Module):
             else:
                 enhanced_features[g1] = feat1
         
-        # Generate predictions for each group
+        # Ggnerate predictions for each group
         group_predictions = {
             name: self.group_predictors[name](feat)
             for name, feat in enhanced_features.items()
         }
         
-        # Generate style embedding
+        # generate style embedding
         style_embedding = self.style_projector(enhanced_features['style'])
         
         # Combine all predictions
@@ -339,15 +338,15 @@ class StyleClassifier(nn.Module):
                 - total loss
                 - dictionary of individual loss components
         """
-        # Default group weights
+        # default group weights
         if group_weights is None:
             group_weights = {name: 1.0 for name in self.ATTRIBUTE_GROUPS}
             group_weights['style'] = 2.0  # emphasize style attributes
         
-        # Split targets by group
+        # split targets by group
         target_groups = self._split_attributes(targets)
         
-        # Compute loss for each group
+        # Ccmpute loss for each group
         losses = {}
         total_loss = 0
         
@@ -355,7 +354,7 @@ class StyleClassifier(nn.Module):
             group_pred = predictions['group_predictions'][group_name]
             group_target = target_groups[group_name]
             
-            # Binary cross entropy loss
+            # binary cross entropy loss
             group_loss = F.binary_cross_entropy_with_logits(
                 group_pred,
                 group_target,
@@ -369,17 +368,17 @@ class StyleClassifier(nn.Module):
             
             total_loss += weighted_loss
         
-        # Contrastive loss for style attributes
+        # contrastive loss for style attributes
         if style_pairs is not None:
             anchor_emb = predictions['style_embedding']
             positive_emb, negative_emb = style_pairs
             
-            # Normalize embeddings
+            # nrmalize embeddings
             anchor_emb = F.normalize(anchor_emb, dim=1)
             positive_emb = F.normalize(positive_emb, dim=1)
             negative_emb = F.normalize(negative_emb, dim=1)
             
-            # Compute similarities
+            # compute similarities
             pos_sim = torch.sum(anchor_emb * positive_emb, dim=1)
             neg_sim = torch.sum(anchor_emb * negative_emb, dim=1)
             
@@ -397,7 +396,7 @@ class StyleClassifier(nn.Module):
             
             contrastive_loss = F.cross_entropy(logits, labels)
             
-            # Add to total loss
+            # add to total loss
             total_loss += contrastive_loss * group_weights['style']
             losses['contrastive_loss'] = contrastive_loss.item()
         

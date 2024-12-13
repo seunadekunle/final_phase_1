@@ -1,6 +1,5 @@
-"""data module for managing deepfashion dataset splits and dataloaders"""
+"""Data Module for Managing DeepFashion Dataset Splits and Dataloaders"""
 
-from pathlib import Path
 from typing import Optional
 
 import torch
@@ -9,17 +8,17 @@ from torch.utils.data import DataLoader
 from .dataset import DeepFashionDataset
 
 class DeepFashionDataModule:
-    """data module for managing deepfashion dataset loading and preprocessing
+    """Data Module for Managing DeepFashion Dataset Loading and Preprocessing
     
-    args:
+    Args:
         config: configuration object containing data parameters
         image_size: optional override for image size (default: None)
     """
     
     def __init__(self, config, image_size=None):
-        """initialize data module
+        """Initialize Data Module
         
-        args:
+        Args:
             config: configuration object with data parameters
                 - data_dir: path to dataset directory
                 - batch_size: batch size for dataloaders
@@ -48,7 +47,7 @@ class DeepFashionDataModule:
         self.test_dataset: Optional[DeepFashionDataset] = None
         
     def setup(self):
-        """set up all dataset splits"""
+        """Set Up All Dataset Splits"""
         # create training dataset
         self.train_dataset = DeepFashionDataset(
             data_dir=self.config.data_dir,
@@ -90,9 +89,9 @@ class DeepFashionDataModule:
         self.num_attributes = self.train_dataset.num_attributes
         
     def update_image_size(self, new_size):
-        """update image size for all datasets
+        """Update Image Size for All Datasets
         
-        args:
+        Args:
             new_size: new image size to use
         """
         self.image_size = new_size
@@ -104,7 +103,7 @@ class DeepFashionDataModule:
             self.test_dataset.image_size = new_size
         
     def train_dataloader(self):
-        """create training dataloader"""
+        """Create Training Dataloader"""
         return DataLoader(
             self.train_dataset,
             batch_size=self.config.batch_size,
@@ -114,7 +113,7 @@ class DeepFashionDataModule:
         )
         
     def val_dataloader(self):
-        """create validation dataloader"""
+        """Create Validation Dataloader"""
         return DataLoader(
             self.val_dataset,
             batch_size=self.config.batch_size,
@@ -124,7 +123,7 @@ class DeepFashionDataModule:
         )
         
     def test_dataloader(self):
-        """create test dataloader"""
+        """Create Test Dataloader"""
         return DataLoader(
             self.test_dataset,
             batch_size=self.config.batch_size,

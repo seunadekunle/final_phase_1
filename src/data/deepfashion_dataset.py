@@ -1,7 +1,7 @@
 """
-DeepFashion dataset loading and preprocessing.
+deepfashion dataset loading and preprocessing.
 
-Handles loading and preprocessing of the DeepFashion dataset
+handles loading and preprocessing of the deepfashion dataset
 for fine-grained attribute prediction.
 """
 
@@ -21,12 +21,12 @@ logger = logging.getLogger(__name__)
 
 class DeepFashionDataset(Dataset):
     """
-    DeepFashion dataset for fine-grained attribute prediction.
+    deepfashion dataset for fine-grained attribute prediction.
     
-    Features:
-    - Loads images and attribute annotations
-    - Supports train/val/test splits
-    - Implements data augmentation for training
+    features:
+    - loads images and attribute annotations
+    - supports train/val/test splits
+    - implements data augmentation for training
     """
     
     def __init__(
@@ -37,19 +37,19 @@ class DeepFashionDataset(Dataset):
         target_size: Tuple[int, int] = (224, 224)
     ):
         """
-        Initialize dataset.
+        initialize dataset.
         
-        Args:
-            root_dir: Path to DeepFashion dataset root
-            split: Dataset split ('train', 'val', or 'test')
-            transform: Optional albumentations transform pipeline
-            target_size: Target image size (height, width)
+        args:
+            root_dir: path to deepfashion dataset root
+            split: dataset split ('train', 'val', or 'test')
+            transform: optional albumentations transform pipeline
+            target_size: target image size (height, width)
         """
         self.root_dir = Path(root_dir)
         self.split = split
         self.transform = transform or self._get_default_transform(split, target_size)
         
-        # Load annotations
+        # load annotations
         self.img_paths, self.attributes = self._load_annotations()
         logger.info(f"Loaded {len(self)} images for {split} split")
         
@@ -58,7 +58,7 @@ class DeepFashionDataset(Dataset):
         split: str,
         target_size: Tuple[int, int]
     ) -> A.Compose:
-        """Get default transformation pipeline."""
+        """get default transformation pipeline."""
         if split == "train":
             return A.Compose([
                 A.RandomResizedCrop(*target_size, scale=(0.8, 1.0)),
@@ -82,14 +82,14 @@ class DeepFashionDataset(Dataset):
     
     def _load_annotations(self) -> Tuple[List[Path], torch.Tensor]:
         """
-        Load and parse dataset annotations.
+        load and parse dataset annotations.
         
-        Returns:
-            Tuple containing:
-            - List of image paths
-            - Tensor of attribute labels
+        returns:
+            tuple containing:
+            - list of image paths
+            - tensor of attribute labels
         """
-        # Load split-specific files
+        # load split-specific files
         split_file = self.root_dir / "Anno_fine" / f"{self.split}.txt"
         attr_file = self.root_dir / "Anno_fine" / f"{self.split}_attr.txt"
         
@@ -98,13 +98,13 @@ class DeepFashionDataset(Dataset):
         if not attr_file.exists():
             raise FileNotFoundError(f"Attribute file not found: {attr_file}")
             
-        # Load image paths and attributes
+        # load image paths and attributes
         with open(split_file, 'r') as f:
             img_paths = []
             for line in f:
                 img_path = line.strip()
-                if img_path:  # Skip empty lines
-                    # Construct the correct path relative to root_dir
+                if img_path: 
+                    # construct the correct path relative to root_dir
                     full_path = self.root_dir / img_path
                     img_paths.append(full_path)
             
@@ -112,23 +112,23 @@ class DeepFashionDataset(Dataset):
             attributes = []
             for line in f:
                 parts = line.strip().split()
-                if len(parts) > 1:  # Skip empty lines
-                    attr_values = [int(x) for x in parts[1:]]  # Skip image name
-                    # Convert from -1/1 to 0/1
+                if len(parts) > 1: 
+                    attr_values = [int(x) for x in parts[1:]]  # skip image name
+                    # convert from -1/1 to 0/1
                     attr_values = [(x + 1) // 2 for x in attr_values]
                     attributes.append(attr_values)
         
-        # Convert to tensor
+        # convert to tensor
         attributes = torch.tensor(attributes, dtype=torch.float32)
         
-        # Verify matching lengths
+        # verify matching lengths
         if len(img_paths) != len(attributes):
             raise ValueError(
                 f"Number of images ({len(img_paths)}) does not match "
                 f"number of attribute labels ({len(attributes)})"
             )
         
-        # Filter out missing images
+        # filter out missing images
         valid_indices = []
         valid_paths = []
         for i, img_path in enumerate(img_paths):
@@ -138,7 +138,7 @@ class DeepFashionDataset(Dataset):
             else:
                 logger.warning(f"Image not found: {img_path}")
         
-        # Keep only valid images and their attributes
+        # keep only valid images and their attributes
         valid_indices = torch.tensor(valid_indices)
         attributes = attributes[valid_indices]
         
@@ -147,26 +147,26 @@ class DeepFashionDataset(Dataset):
         return valid_paths, attributes
     
     def __len__(self) -> int:
-        """Get dataset length."""
+        """get dataset length."""
         return len(self.img_paths)
     
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         """
-        Get a single sample.
+        get a single sample.
         
-        Args:
-            idx: Sample index
+        args:
+            idx: sample index
             
-        Returns:
-            Dict containing:
-            - image: Preprocessed image tensor
-            - attributes: Attribute labels
+        returns:
+            dict containing:
+            - image: preprocessed image tensor
+            - attributes: attribute labels
         """
-        # Load and preprocess image
+        # load and preprocess image
         img_path = self.img_paths[idx]
         image = Image.open(img_path).convert("RGB")
         
-        # Apply transforms
+        # apply transforms
         if self.transform:
             image = self.transform(image=np.array(image))["image"]
         
@@ -182,16 +182,16 @@ def create_dataloaders(
     target_size: Tuple[int, int] = (224, 224)
 ) -> Dict[str, DataLoader]:
     """
-    Create DataLoader instances for all splits.
+    create dataloader instances for all splits.
     
-    Args:
-        root_dir: Path to dataset root
-        batch_size: Batch size
-        num_workers: Number of data loading workers
-        target_size: Target image size
+    args:
+        root_dir: path to dataset root
+        batch_size: batch size
+        num_workers: number of data loading workers
+        target_size: target image size
         
-    Returns:
-        Dict containing DataLoaders for train, val, and test splits
+    returns:
+        dict containing dataloaders for train, val, and test splits
     """
     dataloaders = {}
     

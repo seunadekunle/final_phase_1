@@ -1,4 +1,4 @@
-"""evaluation metrics for deepfashion attribute prediction"""
+"""Evaluation Metrics for DeepFashion Attribute Prediction"""
 
 import torch
 import torch.nn.functional as F
@@ -10,14 +10,14 @@ def compute_top_k_accuracy(
     targets: torch.Tensor,
     k: int = 5
 ) -> float:
-    """compute top-k accuracy for multi-class prediction
+    """Compute Top-k Accuracy for Multi-class Prediction
     
-    args:
+    Args:
         predictions: predicted logits (batch_size, num_classes)
         targets: target labels (batch_size,)
         k: number of top predictions to consider
         
-    returns:
+    Returns:
         float: top-k accuracy
     """
     batch_size = targets.size(0)
@@ -31,13 +31,13 @@ def compute_per_attribute_accuracy(
     predictions: torch.Tensor,
     targets: torch.Tensor
 ) -> Tuple[float, List[float]]:
-    """compute accuracy for each attribute and mean accuracy
+    """Compute Accuracy for Each Attribute and Mean Accuracy
     
-    args:
+    Args:
         predictions: predicted logits (batch_size, num_attributes)
         targets: target labels (batch_size, num_attributes)
         
-    returns:
+    Returns:
         tuple: (mean_accuracy, per_attribute_accuracies)
     """
     # convert logits to binary predictions (-1 or 1)
@@ -57,16 +57,16 @@ def compute_recall_at_k(
     gallery_labels: torch.Tensor,
     k: int = 5
 ) -> float:
-    """compute recall@k for retrieval
+    """Compute Recall@K for Retrieval
     
-    args:
+    Args:
         query_features: query feature vectors (num_queries, feature_dim)
         gallery_features: gallery feature vectors (num_gallery, feature_dim)
         query_labels: query labels (num_queries, num_attributes)
         gallery_labels: gallery labels (num_gallery, num_attributes)
         k: number of top retrievals to consider
         
-    returns:
+    Returns:
         float: recall@k
     """
     # compute cosine similarity
@@ -91,15 +91,15 @@ def compute_baseline_metrics(
     features: torch.Tensor = None,
     split: str = "val"
 ) -> Dict[str, float]:
-    """compute all baseline metrics from deepfashion paper
+    """Compute All Baseline Metrics from DeepFashion Paper
     
-    args:
+    Args:
         predictions: dict containing model outputs
         targets: target attributes
         features: optional feature vectors for retrieval
         split: dataset split (train/val/test)
         
-    returns:
+    Returns:
         dict: metrics dictionary
     """
     metrics = {}
@@ -125,13 +125,13 @@ def compute_improved_metrics(
     predictions: Dict[str, torch.Tensor],
     targets: torch.Tensor
 ) -> Dict[str, float]:
-    """compute metrics for improved model
+    """Compute Metrics for Improved Model
     
-    args:
+    Args:
         predictions: dict containing model outputs
         targets: target attributes
         
-    returns:
+    Returns:
         dict: metrics dictionary
     """
     metrics = compute_baseline_metrics(predictions, targets)

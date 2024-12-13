@@ -1,8 +1,8 @@
 """
 Implementation of the Dual Attribute-aware Ranking Network (DARN).
 
-This module contains the PyTorch implementation of the DARN architecture
-for fine-grained attribute prediction on fashion images.
+This Module Contains the PyTorch Implementation of the DARN Architecture
+for Fine-grained Attribute Prediction on Fashion Images.
 
 Reference:
     "DARN: A Deep Attentive Recurrent Network for Learning Attribute-Specific
@@ -16,7 +16,7 @@ import torch.nn.functional as F
 from typing import Tuple, Dict
 
 class AttributeAttention(nn.Module):
-    """Attribute-aware attention module."""
+    """Attribute-aware Attention Module."""
     
     def __init__(self, in_features: int, num_attributes: int):
         super().__init__()
@@ -29,7 +29,7 @@ class AttributeAttention(nn.Module):
         
     def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
         """
-        Apply attribute-specific attention.
+        Apply Attribute-specific Attention.
         
         Args:
             x: Input features (batch_size, in_features)
@@ -46,7 +46,7 @@ class AttributeAttention(nn.Module):
 
 class DARN(nn.Module):
     """
-    Dual Attribute-aware Ranking Network for fine-grained attribute prediction.
+    Dual Attribute-aware Ranking Network for Fine-grained Attribute Prediction.
     
     Features:
     - VGG16 backbone with feature pyramid
@@ -62,7 +62,7 @@ class DARN(nn.Module):
         pretrained: bool = True
     ):
         """
-        Initialize DARN model.
+        Initialize DARN Model.
         
         Args:
             num_attributes: Number of attributes to predict
@@ -107,7 +107,7 @@ class DARN(nn.Module):
         self._init_weights()
         
     def _get_backbone(self, backbone_name: str, pretrained: bool) -> nn.Module:
-        """Get pretrained backbone CNN."""
+        """Get Pretrained Backbone CNN."""
         if backbone_name == "vgg16":
             model = models.vgg16(pretrained=pretrained)
             return nn.Sequential(*list(model.features.children()))
@@ -126,7 +126,7 @@ class DARN(nn.Module):
         raise ValueError(f"Unsupported backbone: {backbone_name}")
     
     def _get_backbone_dim(self, backbone_name: str) -> int:
-        """Get backbone output dimension."""
+        """Get Backbone Output Dimension."""
         if backbone_name == "vgg16":
             return 512 * 7 * 7  # vgg16 output size with 224x224 input
         elif backbone_name == "resnet34":
@@ -134,7 +134,7 @@ class DARN(nn.Module):
         raise ValueError(f"Unsupported backbone: {backbone_name}")
     
     def _init_weights(self):
-        """Initialize model weights."""
+        """Initialize Model Weights."""
         for m in self.modules():
             if isinstance(m, nn.Linear):
                 nn.init.kaiming_normal_(m.weight)
@@ -143,7 +143,7 @@ class DARN(nn.Module):
     
     def forward(self, x: torch.Tensor) -> Dict[str, torch.Tensor]:
         """
-        Forward pass through the network.
+        Forward Pass Through the Network.
         
         Args:
             x: Input tensor of shape (batch_size, channels, height, width)
@@ -185,7 +185,7 @@ class DARN(nn.Module):
     
     def get_embedding(self, x: torch.Tensor) -> torch.Tensor:
         """
-        Get attribute-aware embeddings for retrieval.
+        Get Attribute-aware Embeddings for Retrieval.
         
         Args:
             x: Input tensor

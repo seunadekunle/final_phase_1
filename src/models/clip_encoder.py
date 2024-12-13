@@ -4,11 +4,11 @@ import torch.nn as nn
 from transformers import CLIPModel, CLIPProcessor
 
 class CLIPEncoder(nn.Module):
-    """wrapper for CLIP model to extract visual features."""
+    """Wrapper for CLIP Model to Extract Visual Features."""
     
     def __init__(self, model_name: str = "openai/clip-vit-base-patch32"):
         """
-        initialize CLIP encoder.
+        Initialize CLIP Encoder.
         
         Args:
             model_name: Name of the CLIP model to use
@@ -23,7 +23,7 @@ class CLIPEncoder(nn.Module):
             
     def forward(self, images: torch.Tensor) -> torch.Tensor:
         """
-        extract visual features from images using CLIP.
+        Extract Visual Features from Images Using CLIP.
         
         Args:
             images: Batch of images (B, C, H, W)

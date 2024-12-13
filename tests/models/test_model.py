@@ -23,7 +23,7 @@ def test_clip_encoder_initialization():
     assert encoder.model is not None
     assert encoder.processor is not None
     
-    # Check if parameters are frozen
+    # check if parameters are frozen
     for param in encoder.model.parameters():
         assert not param.requires_grad
 
