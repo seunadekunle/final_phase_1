@@ -13,7 +13,7 @@ from PIL import Image
 from src.configs.config import Config
 from src.data.datamodule import DeepFashionDataModule
 from src.models.style_classifier import StyleClassifier
-from src.training.trainer import StyleTrainer
+from legacy.style_classifier.src.models.trainer import StyleTrainer
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)

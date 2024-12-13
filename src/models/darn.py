@@ -72,14 +72,14 @@ class DARN(nn.Module):
         """
         super().__init__()
         
-        # Load backbone and get intermediate features
+        # load backbone and get intermediate features
         self.backbone = self._get_backbone(backbone, pretrained)
         backbone_dim = self._get_backbone_dim(backbone)
         
-        # Add adaptive pooling for ResNet
+        # add adaptive pooling for resnet
         self.adaptive_pool = nn.AdaptiveAvgPool2d((1, 1))
         
-        # Global branch
+        # global branch
         self.global_branch = nn.Sequential(
             nn.Linear(backbone_dim, embedding_dim),
             nn.ReLU(),
@@ -87,7 +87,7 @@ class DARN(nn.Module):
         )
         self.global_attention = AttributeAttention(embedding_dim, num_attributes)
         
-        # Local branch (attribute-specific)
+        # local branch (attribute-specific)
         self.local_branch = nn.Sequential(
             nn.Linear(backbone_dim, embedding_dim),
             nn.ReLU(),
@@ -95,7 +95,7 @@ class DARN(nn.Module):
         )
         self.local_attention = AttributeAttention(embedding_dim, num_attributes)
         
-        # Attribute prediction heads
+        # attribute prediction heads
         self.attribute_classifier = nn.Sequential(
             nn.Linear(embedding_dim * 2, embedding_dim),
             nn.ReLU(),
@@ -103,7 +103,7 @@ class DARN(nn.Module):
             nn.Linear(embedding_dim, num_attributes)
         )
         
-        # Initialize weights
+        # initialize weights
         self._init_weights()
         
     def _get_backbone(self, backbone_name: str, pretrained: bool) -> nn.Module:
@@ -128,9 +128,9 @@ class DARN(nn.Module):
     def _get_backbone_dim(self, backbone_name: str) -> int:
         """Get backbone output dimension."""
         if backbone_name == "vgg16":
-            return 512 * 7 * 7  # VGG16 output size with 224x224 input
+            return 512 * 7 * 7  # vgg16 output size with 224x224 input
         elif backbone_name == "resnet34":
-            return 512  # ResNet34 output channels
+            return 512  # resnet34 output channels
         raise ValueError(f"Unsupported backbone: {backbone_name}")
     
     def _init_weights(self):
@@ -156,23 +156,23 @@ class DARN(nn.Module):
             - global_attention: Global attention weights
             - local_attention: Local attention weights
         """
-        # Extract backbone features
+        # extract backbone features
         features = self.backbone(x)
         features = self.adaptive_pool(features)
         features = features.view(features.size(0), -1)
         
-        # Global branch
+        # global branch
         global_features = self.global_branch(features)
         global_attended, global_attention = self.global_attention(global_features)
         
-        # Local branch
+        # local branch
         local_features = self.local_branch(features)
         local_attended, local_attention = self.local_attention(local_features)
         
-        # Combine features
+        # combine features
         combined_features = torch.cat([global_attended, local_attended], dim=1)
         
-        # Predict attributes
+        # predict attributes
         predictions = torch.sigmoid(self.attribute_classifier(combined_features))
         
         return {

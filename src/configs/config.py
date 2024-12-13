@@ -10,15 +10,15 @@ class DataConfig:
     batch_size: int = 128  # increased since we're not loading images
     num_workers: int = 4
     
-    # Dataset files
+    # dataset files
     attribute_list_file: str = "Anno_fine/list_attr_cloth.txt"
     
-    # Split files
+    # split files
     train_split: str = "Anno_fine/train.txt"
     val_split: str = "Anno_fine/val.txt"
     test_split: str = "Anno_fine/test.txt"
     
-    # Attribute files
+    # attribute files
     train_attr: str = "Anno_fine/train_attr.txt"
     val_attr: str = "Anno_fine/val_attr.txt"
     test_attr: str = "Anno_fine/test_attr.txt"
